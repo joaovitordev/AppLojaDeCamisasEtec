@@ -27,7 +27,62 @@
       <ion-title>Home</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">
 
+  <ion-content>
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <img src="../../assets/slider-selecoes.png">
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/slider-champions.png">
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/slider-libertadores.png">
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/slider-brasileirao.png">
+      </ion-slide>
+    </ion-slides>
+
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <img src="../../assets/grid-adidas.png">
+        </ion-col>
+        <ion-col size="3">
+          <img src="../../assets/grid-nike.png">
+        </ion-col>
+        <ion-col size="3">
+          <img src="../../assets/grid-puma.png">
+        </ion-col>
+        <ion-col size="3">
+          <img src="../../assets/grid-umbro.png">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <ion-label class="title">Camisas em promoção</ion-label>
+
+    <ion-slides [options]="sliderCamisas">
+      <ion-slide *ngFor="let camisas of ListaCamisas">
+        <ion-card>
+          <ion-card-header>
+            <img src="{{ camisas.imagem }}">
+            <ion-card-subtitle>{{ camisas.descricao }}</ion-card-subtitle>
+            <ion-card-title>{{ camisas.valor }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button size="small" color="success">
+              Comprar
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+
+    <p class="footer">	Desenvolvidor por João Vitor de Souza Teixeira turma A</p>
   </ion-content>
+
 </div>

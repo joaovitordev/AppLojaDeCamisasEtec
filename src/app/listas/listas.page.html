@@ -27,7 +27,65 @@
       <ion-title>Camisas</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">
+    <ion-content>
 
+      <ion-label class="title">Brasileirão</ion-label>
+
+      <ion-slides [options]="sliderCamisas">
+        <ion-slide *ngFor="let camisas of brasileirao">
+          <ion-card>
+            <ion-card-header>
+              <img src="{{ camisas.imagem }}">
+              <ion-card-subtitle>{{ camisas.descricao }}</ion-card-subtitle>
+              <ion-card-title>{{ camisas.valor }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-button size="small" color="success">
+                Comprar
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+
+      
+      <ion-label class="title">Champions League</ion-label>
+
+      <ion-slides [options]="sliderCamisas">
+        <ion-slide *ngFor="let camisas of champions">
+          <ion-card>
+            <ion-card-header>
+              <img src="{{ camisas.imagem }}">
+              <ion-card-subtitle>{{ camisas.descricao }}</ion-card-subtitle>
+              <ion-card-title>{{ camisas.valor }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-button size="small" color="success">
+                Comprar
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+
+      
+      <ion-label class="title">Seleções</ion-label>
+
+      <ion-slides [options]="sliderCamisas">
+        <ion-slide *ngFor="let camisas of selecoes">
+          <ion-card>
+            <ion-card-header>
+              <img src="{{ camisas.imagem }}">
+              <ion-card-subtitle>{{ camisas.descricao }}</ion-card-subtitle>
+              <ion-card-title>{{ camisas.valor }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-button size="small" color="success">
+                Comprar
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
   </ion-content>
 </div>
